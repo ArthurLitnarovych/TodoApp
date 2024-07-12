@@ -1,0 +1,16 @@
+FROM node:20.13.1 as todo
+
+WORKDIR /appbe
+
+COPY ./backend/package*.json ./
+
+RUN yarn
+
+COPY ./backend .
+
+RUN yarn add prisma tsc-alias tsc -D
+
+EXPOSE ${SERVER_PORT}
+EXPOSE ${SOCKET_PORT}
+
+CMD ["yarn", "start"]

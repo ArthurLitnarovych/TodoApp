@@ -1,0 +1,15 @@
+FROM node:18-alpine as build
+
+WORKDIR /appfe
+
+COPY ./frontend/package*.json ./
+
+RUN yarn
+
+COPY ./frontend .
+
+RUN yarn add vite -D
+
+EXPOSE 5173
+
+CMD ["yarn", "dev"]
