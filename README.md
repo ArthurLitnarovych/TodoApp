@@ -102,3 +102,7 @@ React, Typescript, Zustand, Formik, Blueprint, Emotion CSS.
 - _All pagination should be handled by backend_
 - _Change frontend request with pagination params_
 - _Pagination should be done differently on different devices. Desktop - button pagination, Tablet - horizontal scroll pagination, Mobile - vertical scroll pagination_
+
+## Preview
+
+https://task-flow-fe.vercel.app/
